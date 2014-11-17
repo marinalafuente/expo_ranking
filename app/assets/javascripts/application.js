@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require foundation
+$(document).foundation();
 // require turbolinks
 //= require jquery
 //= require jquery_ujs
 //= require_tree
 //= require highcharts
-$(function(){ $(document).foundation(); });

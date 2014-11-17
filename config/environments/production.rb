@@ -1,4 +1,6 @@
 Rails.application.configure do
+  #modernizr is for Foundation correct running
+  config.assets.precompile += %w( vendor/modernizr.js )
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

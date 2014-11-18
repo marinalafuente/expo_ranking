@@ -1,13 +1,27 @@
-ul.pagination {
-	margin-bottom: 20px;
-	overflow: hidden;
-	padding: 0;
+img, a img {
+	border:0;
+} 
+/* nobody likes default border around images */
+.clear {
+	display: inline-block;
 }
-ul.pagination li {
-	background:none;
-	color: #8fd500;
-	display: inline;
-	list-style: none;
-	margin: 0 2px;
-	padding:0;
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+* html .clear {
+	height: 1%;
+}
+.clear {
+	display: block;
+}
+.orbit-caption{
+	
+}
+.large-9 {
+width: 75%;
+margin-left: 100px;
 }

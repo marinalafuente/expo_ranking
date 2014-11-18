@@ -1,25 +1,30 @@
-$(function showGraphic() {
+function generateChart(data){
     $('#container').highcharts({
         chart: {
             type: 'bar'
         },
         title: {
-            text: 'Fruit Consumption'
+            text: 'This month'
         },
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+            categories: ['Expo1', 'Expo2', 'Expo3']
         },
         yAxis: {
             title: {
-                text: 'Fruit eaten'
+                text: 'Most visited'
             }
         },
-        series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
-        }],
+        series: data,
     });
+}
+
+function printChart() {
+    $.ajax({
+        url: '/chart-data',
+        success: generateChart
+    });
+}
+
+$(function showGraphic() {
+    printChart();
 });

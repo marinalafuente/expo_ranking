@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   get '/', to: 'home#index'
 
   get '/chart-data', to: 'home#data'
+
+  get'/info', to: 'home#info'
+
+  get'/votes', to: 'votes#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

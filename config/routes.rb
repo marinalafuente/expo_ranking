@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   get'/info', to: 'home#info'
 
-  get'/votes', to: 'votes#index'
+  get'/votes', to: 'votes#index' 
+
+  resources :locations do
+    resources :expos
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

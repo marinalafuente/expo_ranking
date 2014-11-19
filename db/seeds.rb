@@ -6,21 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-mncars, thyssen, prado, march, caixa = Location.create([
-  {name: 'MNCARS'},
-  {name: 'Museo Thyssen'},
-  {name: 'Museo del Prado'},
-  {name: 'Fundacion Juan March'},
-  {name: 'Fundacion Mapfre'},
-  {name: 'Caixa Forum'}
-])
+locations = {
+  mncars: %w(expo1 expo2),
+  thyssen: %w(expo1 expo2),
+  prado: %w(expo1 expo2)
+}
 
-Expo.create([
-  {name: 'Las Animas de Bernini. Arte en Roma para la corte espanola',  
-  	location_id: prado.id },
-  {name: 'Dibujos espanoles en la Hamburger Kunsthalle: Cano, Murillo y Goya',  
-  	location_id: prado.id },
-  {name: 'El mal se desvanece. Egusquiza y el Parsifal de Wagner en el Museo del Prado', 
-  	location_id: prado.id }
-])
+locations.each do |name, value|
+  location = Location.new
+  location.name = name
+  value.each do |expo|
+    location.expos.build(name: expo)
+  end
+  location.save
+end
+
+#Expo.create([
+#  {name: 'Las Animas de Bernini. Arte en Roma para la corte espanola',  
+#  	location_id: prado.id },
+#  {name: 'Dibujos espanoles en la Hamburger Kunsthalle: Cano, Murillo y Goya',  
+#  	location_id: prado.id },
+#  {name: 'El mal se desvanece. Egusquiza y el Parsifal de Wagner en el Museo del Prado', 
+#  	location_id: prado.id }
+#])
 

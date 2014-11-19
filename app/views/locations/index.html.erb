@@ -77,7 +77,7 @@
           <h4>You decide</h4><hr/>
               <p>
                 <% @locations.each do |museum| %>
-                <%= museum.name %>
+                <%= link_to museum.name, museum %>
                 
               </p>
               <ul>

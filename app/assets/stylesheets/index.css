@@ -31,7 +31,7 @@ img, a img {
 } 
 /* nobody likes default border around images */
 img.back {
-padding: 100px 0;
+padding: 0;
 background: url(data/counter.jpg) center center fixed #444;
 background-position: 50% -15.5px;
 }

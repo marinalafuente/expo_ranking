@@ -12,34 +12,21 @@
               </a>
             </h1>
           </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          <li class="toggle-topbar menu-icon"></li>
         </ul>
  
         <section class="top-bar-section">
           <ul class="left">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-          </ul>
- 
-          <ul class="right">
-            <li class="search">
-              <form>
-                <input type="search">
-              </form>
-            </li>
- 
-            <li class="has-button">
-              <a class="small button" href="#">Search</a>
-            </li>
+            <li><%=link_to 'HOME',home_path, class:"button" %></li>
           </ul>
         </section>
       </nav>
- <!--Navigation menu -->
-     
   
     </div>
   </div>
- 
+ <!--Navigation menu -->
+
+
  <!--slide image centered-->
   <div class="row">
     <div class="large-12 columns">
@@ -53,7 +40,7 @@
           </div>
         </div>
   <!--slide image centered-->
-     
+
     <div class="row">
       <div class="small-12 show-for-small"><br>
         <img src="http://placehold.it/1000x600&text=For Small Screens"/>
@@ -72,44 +59,31 @@
     <div class="large-12 columns">
       <div class="row">
  
-         <div class="large-4 columns hide-for-small">
- 
+         <div class="large-4 columns hide-for-small"> 
           <h4>You decide</h4><hr/>
-              
-          <a class="large button expand" href="#">
-            Vote Up
-          </a>
- 
-          <a class="large button expand" href="#">
-            Vote Down
-          </a> 
+          <ul>
+                <% @expos.each do |expo| %>
+                <li><%= link_to expo.name, location_expo_path(expo.location, expo) %></li>
+                <% end %>
+          </ul>              
+        </div>
+
+<!--likes-->
+ <div class="row">
+    <div class="large-12 columns">
+
+        <h4>Likes: <span class="badge" id="likeCounter">0</span></h4>
+         
+         <div class="likeClick">
+            <button id="likeButton" type="button" class="btn btn-default btn-lg">
+                <span>Like</span> 
+            </button>
+            <button id ="DislikeButton" type="button" class="btn btn-default btn-lg">
+                <span>Dislike</span> 
+            </button>
          </div>
- <!--some text like a blog-->
-        <div class="large-8 columns">
-          <div class="panel radius">
- 
-          <div class="row">
-          <div class="large-6 small-6 columns">
- 
-            <h4>Header</h4><hr/>
-            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-            </h5>
- 
- 
-          </div>
-          <div class="large-6 small-6 columns">
- 
-            <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-          </p>
-        </div>
- 
-        </div>
-        </div>
-        </div> 
- 
-      </div>
     </div>
-  </div>
+</div>        
  
 <!--footer-->
  

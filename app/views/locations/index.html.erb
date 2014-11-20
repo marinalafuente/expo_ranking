@@ -1,3 +1,4 @@
+<h1>INDEX OF MUSEUMS</h1>
 <div class="row">
   <div class="large-12 columns">
  
@@ -6,33 +7,17 @@
         <ul class="title-area">
            
           <li class="name">
-            <h1>
-              <a href="#">
-                Give your vote!
-              </a>
-            </h1>
+
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
         </ul>
  
         <section class="top-bar-section">
           <ul class="left">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
+            <li><%=link_to 'HOME',home_path, class:"button" %></li>
           </ul>
  
-          <ul class="right">
-            <li class="search">
-              <form>
-                <input type="search">
-              </form>
-            </li>
- 
-            <li class="has-button">
-              <a class="small button" href="#">Search</a>
-            </li>
-          </ul>
-        </section>
+          
       </nav>
  <!--Navigation menu -->
      
@@ -69,7 +54,7 @@
  <!--some kind of buttons-->
  
   <div class="row">
-    <div class="large-12 columns">
+    <div class="large-12 columns center">
       <div class="row">
  
          <div class="large-4 columns hide-for-small">
@@ -87,14 +72,8 @@
           
               </ul>
             <% end %>
-          <a class="large button expand" href="#">
-            Vote Up
-          </a>
- 
-          <a class="large button expand" href="#">
-            Vote Down
-          </a> 
          </div>
+
  <!--some text like a blog-->
         <div class="large-8 columns">
           <div class="panel radius">

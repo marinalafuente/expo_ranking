@@ -3,17 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title><%= content_for?(:title) ? yield(:title) : "Expo-ranking" %></title>  
+    <meta charset="utf-8" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Expo-ranking" %></title>    
-    <%= javascript_include_tag 'application', :defer => "defer" %>
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "application", media: "all"%>
+    <%= stylesheet_link_tag    params[:controller]%>
+
+    <%= javascript_include_tag "application", :defer => "defer"  %> 
+    <%= javascript_include_tag params[:controller], :defer => "defer" %>
+
     <%= javascript_include_tag "vendor/modernizr" %> 
     <%= csrf_meta_tags %>
+        
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript" src ="/assets/graphic.js"></script>
-
+    <script type="text/javascript" src ="/assets/likebutton.js"></script>
+    <link rel="stylesheet" href="/assets/application.css">
+    
   </head>
   <body>
     <%= yield %>

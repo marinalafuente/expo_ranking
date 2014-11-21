@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get'/info', to: 'home#info'
 
+  post '/expos/:id/vote', to: 'expos#vote'
+
   #get'/votes', to: 'votes#index'
   
   resources :locations do

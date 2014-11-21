@@ -16,7 +16,7 @@
         </ul>
  
         <section class="top-bar-section">
-          <ul class="left">
+          <ul class="right">
             <li><%=link_to 'HOME',home_path, class:"button" %></li>
           </ul>
         </section>
@@ -35,7 +35,7 @@
  
       <div class="hide-for-small">
         <div id="featured">
-              <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
+              <img src="/assets/interior.jpg" alt="slide image">
                
           </div>
         </div>
@@ -64,27 +64,12 @@
           <ul>
                 <% @expos.each do |expo| %>
                 <li><%= link_to expo.name, location_expo_path(expo.location, expo) %></li>
+                
+          <p>This exposition has <%=@expo.votes.count%> likes!</p> 
                 <% end %>
-          </ul>              
+          </ul> 
         </div>
 
-<!--likes-->
- <div class="row">
-    <div class="large-12 columns">
-
-        <h4>Likes: <span class="badge" id="likeCounter">0</span></h4>
-         
-         <div class="likeClick">
-            <button id="likeButton" type="button" class="btn btn-default btn-lg">
-                <span>Like</span> 
-            </button>
-            <button id ="DislikeButton" type="button" class="btn btn-default btn-lg">
-                <span>Dislike</span> 
-            </button>
-         </div>
-    </div>
-</div>        
- 
 <!--footer-->
  
   <footer class="row">

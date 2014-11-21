@@ -9,3 +9,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( highcharts.js )
 Rails.application.config.assets.precompile += %w( home.js )
 Rails.application.config.assets.precompile += %w( home.css )
+Rails.application.config.assets.precompile += %w( expos.css )
+Rails.application.config.assets.precompile += %w( expos.js )

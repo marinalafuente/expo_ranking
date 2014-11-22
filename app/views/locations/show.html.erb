@@ -61,13 +61,15 @@
  
          <div class="large-4 columns hide-for-small"> 
           <h4>You decide</h4><hr/>
-          <ul>
+          <ul><%@expos = Expo.all%>
                 <% @expos.each do |expo| %>
-                <li><%= link_to expo.name, location_expo_path(expo.location, expo) %></li>
-                
-          <p>This exposition has <%=@expo.votes.count%> likes!</p> 
-                <% end %>
-          </ul> 
+                <li><%= link_to expo.name, location_expo_path(expo.location, expo) %>               
+                <p>This exposition has <% expo.id do %>
+                  <%= @voteResult %> likes!</p>
+                  <% end %>            
+              <% end %></li>
+              
+            </ul> 
         </div>
 
 <!--footer-->

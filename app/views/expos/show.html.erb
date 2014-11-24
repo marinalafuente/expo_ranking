@@ -1,4 +1,8 @@
+ <section>
+    <%=link_to 'Back',locations_path, class:"button" %>          
+ </section>
 
+ <script src="js/foundation/foundation.alert.js"></script>
 <div class="info">
 	<h2 class="exponame"><%= @expo.name %></h2>
 	<p class="description"><%= @expo.description %></p>
@@ -14,13 +18,14 @@
  
          </h4>
          
-         <div class="likeClick">
+         <div id= "likes" class="likeClick">
             <button id="likeButton" data-expoid="<%= @expo.id %>" type="button" class="btn btn-default btn-lg">
               Like 
             </button>
             <button id ="DislikeButton" data-expoid="<%= @expo.id %>" type="button" class="btn btn-default btn-lg">
               Dislike 
             </button>
+
          </div>
     </div>
 </div>        

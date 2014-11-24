@@ -13,8 +13,9 @@ var button1 = document.getElementById("likeButton");
    	likeButton.addEventListener("click", postLikes);
 
 var button2 =document.getElementById("DislikeButton");	
-	DislikeButton.addEventListener("click", postLikes);  
+	DislikeButton.addEventListener("click", postLikes); 
 
+	
 function postLikes (ev){
 	var likes = parseInt(expoLikes.textContent)
 	var type = ""
@@ -29,5 +30,6 @@ function postLikes (ev){
 	var id = ev.target.dataset.expoid;
 
 	$.post('/expos/'+id+'/vote', {"vote": type})
-};
+	$.post('/locations/'+id+'/expos/'+id+'/vote', {"vote": type})
 
+};

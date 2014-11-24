@@ -22,6 +22,18 @@ class HomeController < ApplicationController
             ]
         }].to_json
 
-        render json: @series		
-	end
-end
+        render json: @series
+    end
+        
+    def results
+
+        @result =	[{
+            name: 'Sales',
+            data: [2, 3, null, 4, 0, 5, 1, 4, 6, 3]
+        }].to_json
+
+        render json: @result
+
+    end
+end 
+

@@ -35,3 +35,10 @@ padding: 0;
 background: url(data/counter.jpg) center center fixed #444;
 background-position: 50% -15.5px;
 }
+
+#container {
+	height: 400px; 
+	min-width: 310px; 
+	max-width: 800px;
+	margin: 0 auto;
+}

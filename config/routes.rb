@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   get '/', to: 'home#index', as: 'home'
 
   get '/chart-data', to: 'home#data'
+  #get '/results', to: 'home#results'
 
   get'/info', to: 'home#info'
 
   post '/expos/:id/vote', to: 'expos#vote'
+  post '/locations/:id/vote', to: 'locations#vote'
 
   
   #get'/votes', to: 'votes#index'

@@ -1,21 +1,23 @@
+<div class="votebox">
  <section>
     <%=link_to 'Back',locations_path, class:"button" %>          
  </section>
 
- <script src="js/foundation/foundation.alert.js"></script>
-<div class="info">
+
+<div class="info" id="textbox">
 	<h2 class="exponame"><%= @expo.name %></h2>
 	<p class="description"><%= @expo.description %></p>
 </div>
 
 <!--likes-->
- <div class="row">
+ <div class="votescounter">
     <div class="large-12 columns">
 
-        <h4>Likes: <span id="likeCounter">
-          
-          <%= @voteResult %></span>
- 
+         <h4 class= "likes">Likes:<span id="likeCounter">          
+              <%= @expo.positive_counter %></span>
+         <h4 class= "likes">Dislikes:<span id="dislikeCounter">          
+              <%= @expo.negative_counter %></span>
+        
          </h4>
          
          <div id= "likes" class="likeClick">
@@ -29,3 +31,4 @@
          </div>
     </div>
 </div>        
+</div>

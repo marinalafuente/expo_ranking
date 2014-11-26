@@ -1,0 +1,10 @@
+ <div class="large-4 columns"> 
+       <h4>List</h4><hr/>
+          <ul>
+              <% @exposition.each do |expo| %>
+                <li><%= link_to expo.name, location_expo_path(expo.location, expo) %> 
+                <p>This exposition has <%= expo.positive_counter %> likes and
+                  <%= expo.negative_counter %> dislikes</p>                  
+                <% end %>           
+              </ul>           
+          </div>

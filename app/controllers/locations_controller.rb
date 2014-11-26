@@ -9,7 +9,6 @@ class LocationsController < ApplicationController
 		@exposition = @location.expos.all
 		@expo = Expo.find(params[:id])
 
-		@voteResult = @expo.votes_count #votes.where(vote_flag: true).count - @expo.votes.where(vote_flag: false).count 
 	end
 
 	def vote

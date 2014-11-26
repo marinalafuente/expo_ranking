@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20141118110632) do
     t.integer  "location_id"
     t.string   "name"
     t.text     "description"
-    t.integer  "positive_counter"
-    t.integer  "negative_counter"
+    t.integer  "positive_counter", default: 0
+    t.integer  "negative_counter", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

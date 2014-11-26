@@ -12,8 +12,8 @@ class CreateInitialTables < ActiveRecord::Migration
 	    t.references  "location"
 	    t.string   "name"
 	    t.text  	 "description"
-	    t.integer 	"positive_counter"
-	    t.integer 	"negative_counter"
+	    t.integer 	"positive_counter", default: 0
+	    t.integer 	"negative_counter", default: 0
 	    t.timestamps
 	  end	  
 

@@ -1,41 +1,46 @@
-$(function createChart(results) {
 
+
+$(function() {
+
+function generateChart(chartdata){
+    console.log(chartdata);
     $('#container2').highcharts({
         chart: {
-            type: 'column',
-            margin: 75,
+            type: 'pie',
             options3d: {
                 enabled: true,
-                alpha: 10,
-                beta: 25,
-                depth: 70
+                alpha: 45,
+                beta: 0
             }
         },
         title: {
-            text: '3D chart with null values'
+            text: 'Browser market shares at a specific website, 2014'
         },
-        subtitle: {
-            text: 'Notice the difference between a 0 value and a null point'
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
         plotOptions: {
-            column: {
-                depth: 25
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
             }
         },
-        xAxis: {
-            categories: Highcharts.getOptions().lang.shortMonths
-        },
-        yAxis: {
-            opposite: true
-        },
-        series: results,
+        series: [{data: chartdata.chartdata}]
     });
-});
+};
 
-function showChart() {
+
+function printChart() {
     $.ajax({
-        url: '/results',
-        success: createChart()
+        url: '/chart-data',
+        success: generateChart
     });
 }
+printChart();
 
+});

@@ -1,4 +1,19 @@
-
+.votebox{
+height: 100%;
+background-image: url(tate.jpg);
+background-size: 100%;
+}
+#textbox{
+background-color: #ffffff;
+opacity: 0.6;
+padding: 19px;
+}
+.votescounter{
+margin: 20px;
+}
+.likes{
+color: #ffffff;
+}
 .info {
 width: 50%;
 height: 60%;

@@ -2,7 +2,7 @@ class Vote < ActiveRecord::Base
 belongs_to :expo
 after_create :update_expo_votes
 
-scope :recent,      -> { where('created_at > ?', Time.now - 3.second) }
+scope :recent,      -> { where('created_at > ?', Time.now - 5.hour) }
 #scope :recent,      -> { where('created_at > :created_at', created_at: Time.now - 1.hour) }
 scope :by_ip_address, ->(ip_address) { where(ip_address: ip_address) }
 scope :by_expo_id,  ->(expo_id) { where(expo_id: expo_id)}

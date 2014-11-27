@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get '/', to: 'home#index', as: 'home'
-  
+
+
   get '/chart-data', to: 'home#data'
-  #get '/chart-result', to: 'home#result'
+  get '/graphic', to: 'home#graphic'
 
   get'/info', to: 'home#info'
 

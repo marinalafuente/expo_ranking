@@ -45,7 +45,7 @@ function generateChart(data){
 
 function printChart() {
     $.ajax({
-        url: '/chart-data',
+        url: '/graphic',
         success: generateChart
     });
 }

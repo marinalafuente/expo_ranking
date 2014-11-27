@@ -25,17 +25,14 @@
 
     <div class="large-9 columns">
       <ul class="button-group right">
-        <li onclick= "renderList()" href="#" class="button">Expositions List</li>
-        <!--<li><%=link_to 'Museums',locations_path, class:"button" %></li>-->
+        <li><%=link_to 'Museums', locations_path, class:"button"%></li>
+        <li><%=link_to 'List', info_path, class:"button"%></li>
       </ul>
     </div>
 
-    
-  <div class="row" id="home_info">
-    <%= render "graphics" %>
-    <!--<%= render "locations/listOfMuseums" %> -->
+  <div class="row" id="render">
+    <%= render "graphics" %>    
   </div>
- 
     
   
   <footer class="row">

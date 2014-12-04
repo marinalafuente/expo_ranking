@@ -1,8 +1,0 @@
-# config/facebook.yml
-development:
-  app_id: 100001303683883
-  secret_key: "gordico"
-test:
-  ...
-production:
-  ...

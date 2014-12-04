@@ -1,3 +1,13 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_PI/sdk.js#xfbml=1&appId=1538133696424855&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div class="votebox">
  <section>
     <%=link_to 'Back',locations_path, class:"button" %>          
@@ -7,6 +17,8 @@
 <div class="info" id="textbox">
 	<h2 class="exponame"><%= @expo.name %></h2>
 	<p class="description"><%= @expo.description %></p>
+
+      <div class="fb-comments" data-href="http://localhost:3000/locations" data-width="500px" data-numposts="3" data-colorscheme="dark"></div> 
 </div>
 
 <!--likes-->
@@ -16,8 +28,7 @@
          <h4 class= "likes">Likes:<span id="likeCounter">          
               <%= @expo.positive_counter %></span>
          <h4 class= "likes">Dislikes:<span id="dislikeCounter">          
-              <%= @expo.negative_counter %></span>
-        
+              <%= @expo.negative_counter %></span>       
          </h4>
          
          <div id= "likes" class="likeClick">

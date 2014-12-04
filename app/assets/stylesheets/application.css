@@ -13,12 +13,5 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
- * require foundation
+ *= require foundation
  */
-
-.column, .columns {
-position: relative;
-padding-left: 0.9375rem;
-padding-right: 0.9375rem;
-float: right;
-}

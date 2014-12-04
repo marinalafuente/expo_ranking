@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+ENV['FACEBOOK_APP_ID'] = "1538133696424855";
+ENV['FACEBOOK_SECRET'] = "0939e4ac636ecc5689fbd0be42767e07";
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

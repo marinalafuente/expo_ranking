@@ -8,6 +8,7 @@
 	clear: both;
 	visibility: hidden;
 }
+
 * html .clear {
 	height: 1%;
 }

@@ -40,7 +40,7 @@ gem 'highcharts-rails', '~> 4.0.4'
 gem 'pry'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-gem 'foundation-rails'
+gem 'foundation-rails', group: :assets
 gem 'omniauth-facebook'
 
 group :development, :test do
